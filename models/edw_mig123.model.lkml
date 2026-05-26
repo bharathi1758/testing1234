@@ -14,9 +14,11 @@ explore: orders {}
 
 explore: test {}
 
+explore: hr_employee_attrition {}
+
 explore: sales {
   join: orders {
-    type: left_outer 
+    type: left_outer
     sql_on: ${sales.order_id} = ${orders.order_id} ;;
     relationship: many_to_one
   }
@@ -35,4 +37,3 @@ explore: test_error_records {
       relationship: one_to_many
     }
 }
-
