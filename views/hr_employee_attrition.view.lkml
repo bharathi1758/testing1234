@@ -153,6 +153,18 @@ view: hr_employee_attrition {
     sql: ${TABLE}.exit_date ;;
   }
 
+  dimension: employee_status {
+    type: string
+    sql: ${TABLE}.attrition ;;
+    html: {% if value == 'No' %}
+    <span style="color: green; font-weight: bold;">
+    Active </span>
+    {% elsif value == 'Yes' %}
+    <span style="color: red; font-weight: bold;">
+    Exited </span>
+    {% endif %} ;;
+  }
+
   set: detail {
     fields: [
         employee_id,
