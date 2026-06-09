@@ -139,6 +139,13 @@ view: hr_employee_attrition {
   dimension: attrition {
     type: string
     sql: ${TABLE}.attrition ;;
+    html: {% if value == 'No' %}
+    <span style="color: green; font-weight: bold;">
+    Active </span>
+    {% elsif value == 'Yes' %}
+    <span style="color: red; font-weight: bold;">
+    Exited </span>
+    {% endif %} ;;
   }
 
   dimension: hire_date {
@@ -156,13 +163,7 @@ view: hr_employee_attrition {
   dimension: employee_status {
     type: string
     sql: ${TABLE}.attrition ;;
-    html: {% if value == 'No' %}
-    <span style="color: green; font-weight: bold;">
-    Active </span>
-    {% elsif value == 'Yes' %}
-    <span style="color: red; font-weight: bold;">
-    Exited </span>
-    {% endif %} ;;
+
   }
 
   set: detail {
