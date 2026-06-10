@@ -99,6 +99,7 @@ view: hr_employee_attrition {
   dimension: department {
     type: string
     sql: ${TABLE}.department ;;
+    drill_fields: [employee_id,first_name,attrition]
   }
 
   dimension: job_role {
@@ -141,10 +142,10 @@ view: hr_employee_attrition {
     sql: ${TABLE}.attrition ;;
     html: {% if value == 'No' %}
     <span style="color: green; font-weight: bold;">
-    Active </span>
+    NO </span>
     {% elsif value == 'Yes' %}
     <span style="color: red; font-weight: bold;">
-    Exited </span>
+    YES </span>
     {% endif %} ;;
   }
 
