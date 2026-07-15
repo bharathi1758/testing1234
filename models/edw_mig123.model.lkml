@@ -14,6 +14,8 @@ explore: orders {}
 
 explore: test {}
 
+explore: hr_employee_attrition {}
+
 explore: sales {
   join: orders {
     type: left_outer
