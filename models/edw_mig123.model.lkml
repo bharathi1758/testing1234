@@ -16,12 +16,19 @@ explore: test {}
 
 explore: sales {
   join: orders {
-    type: left_outer 
+    type: left_outer
     sql_on: ${sales.order_id} = ${orders.order_id} ;;
     relationship: many_to_one
   }
 }
+explore: dummy_sales_data {
 
+  access_filter: {
+    field: dummy_sales_data.region
+    user_attribute: test_region
+  }
+
+}
 explore: student {}
 
 explore: final {}
@@ -35,4 +42,3 @@ explore: test_error_records {
       relationship: one_to_many
     }
 }
-
