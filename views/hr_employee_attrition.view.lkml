@@ -94,11 +94,15 @@ view: hr_employee_attrition {
   dimension: employee_id {
     type: number
     sql: ${TABLE}.employee_id ;;
+    html:
+    <div title="Name: {{first_name}} | Department: {{department}} | Attrition: {{attrition}}">{{ value }}</div><br>;;
   }
 
   dimension: first_name {
     type: string
     sql: ${TABLE}.first_name ;;
+    html:
+     <div title="Employee ID: {{employee_id}} | Department: {{department}} | Attrition: {{attrition}}">{{ value }}</div><br>;;
   }
 
   dimension: last_name {
@@ -150,6 +154,27 @@ view: hr_employee_attrition {
   dimension: job_satisfaction {
     type: number
     sql: ${TABLE}.job_satisfaction ;;
+  }
+
+  dimension: job_satisfaction_conditional_formatting {
+    type: number
+    sql: ${TABLE}.job_satisfaction ;;
+
+    html:
+        {% if value==1 %}
+        <div style="background-color: #D14242; color: black; text-align: center; "><b>
+        {{value}}</b></div>
+        {% elsif value == 2 %}
+        <div style="background-color: #F57237; color: black; text-align: center;"><b>
+        {{value}}</b></div>
+        {% elsif value == 3 %}
+        <div style="background-color: #F9CB67; color: black; text-align: center;"><b>
+        {{value}}</b></div>
+        {% elsif value == 4 %}
+         <div style="background-color:  #81BE56; color: black; text-align: center;"><b>
+        {{value}}</b></div>
+        {% endif %}
+        ;;
   }
 
   dimension: work_life_balance {
@@ -276,6 +301,21 @@ view: hr_employee_attrition {
   }
 
 
+
+  dimension: experience_bin {
+    type:  bin
+    bins: [5,10,15]
+    sql: ${TABLE}.years_at_company ;;
+  }
+
+  dimension: experience_group {
+    type:  string
+    sql:
+    CASE when ${TABLE}.years_at_company <= 5 then '0-5 years'
+    when ${TABLE}.years_at_company <= 10 then '6-10 years'
+    else '10+ years'
+    END;;
+  }
 
   set: detail {
     fields: [
