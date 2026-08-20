@@ -22,8 +22,25 @@ view: orders {
     type: number
     sql: ${TABLE}.Price ;;
   }
+
+
+  dimension :price_category {
+    type: string
+    sql: CASE WHEN ${TABLE}.Price < 300 THEN 'low' ELSE 'high'
+      END ;;
+  }
+
   measure: count {
     type: count
     drill_fields: [order_id, order_name, sales.count]
   }
+
+
+  measure: average_price {
+    type: average
+    sql: ${price} ;;
+  }
+
+
+
 }
