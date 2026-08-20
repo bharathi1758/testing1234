@@ -23,7 +23,14 @@ explore: sales {
     relationship: many_to_one
   }
 }
+explore: dummy_sales_data {
 
+  access_filter: {
+    field: dummy_sales_data.region
+    user_attribute: test_region
+  }
+
+}
 explore: student {}
 
 explore: final {}

@@ -304,6 +304,91 @@ SELECT 1200,'Megha','Patwardhan','Female',29,'Sales','Sales Executive','Married'
     sql: ${TABLE}.attrition ;;
 
   }
+  dimension: income_group {
+    type: string
+    sql:
+    CASE
+      WHEN ${monthly_income} <= 30000 THEN 'Low Income'
+      WHEN ${monthly_income} <= 70000 THEN 'Medium Income'
+      ELSE 'High Income'
+    END ;;
+  }
+
+  dimension: employee_no {
+    type: number
+    sql: ${employee_id} ;;
+
+    link: {
+      label: "View Employee Profile"
+      url: "https://hr.company.com/employee/{{ value }}"
+    }
+  }
+
+  dimension: satisfaction_status {
+    sql: ${job_satisfaction} ;;
+
+    html:
+      {% if value >= 4 %}
+      <span style="color:green;">*****  excellent</span>
+      {% elsif value >= 3 %}
+      <span style="color:orange;">****  Good</span>
+      {% else %}
+      <span style="color:red;">**  Poor</span>
+      {% endif %} ;;
+  }
+
+
+  measure: attrition_count {
+    type: count
+    filters: [attrition: "Yes"]
+    html:
+    {% if value >= 2 %}
+    <span style="color:red; font-weight:bold;">
+    {{ value }} High
+    </span>
+    {% elsif value == 1 %}
+    <span style="color:orange;">
+    {{ value }} Medium
+    </span>
+    {% else %}
+    <span style="color:green;">
+    {{ value }} Low
+        </span>
+      {% endif %} ;;
+  }
+
+  dimension: age_bin {
+    type: tier
+    tiers: [25, 35, 45, 55]
+    style: integer
+    sql: ${age} ;;
+  }
+
+  parameter: attrition_selector {
+    type: unquoted
+    allowed_value: { label: "Attrition Yes" value: "Yes" }
+    allowed_value: { label: "Attrition No" value: "No" }
+    allowed_value: { label: "All" value: "All" }
+    default_value: "Yes"
+  }
+
+  measure: dynamic_attrition_rate {
+    type: number
+    sql:
+    CASE
+      WHEN '{% parameter attrition_selector %}' = 'All' THEN 1.0
+      ELSE
+        1.0 * SUM(
+          CASE
+            WHEN ${hr_employee_attrition.attrition} = '{% parameter attrition_selector %}' THEN 1
+            ELSE 0
+          END
+        ) / COUNT(*)
+    END ;;
+    value_format: "0.0%"
+  }
+
+
 
   dimension: experience_bin {
     type:  bin
