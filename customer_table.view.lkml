@@ -1,5 +1,5 @@
 
-view: sql_runner_query {
+view: customer_table {
   derived_table: {
     sql: {% raw %} SELECT 'CUST001' customer_id,'ABC Technologies' customer_name,'Enterprise' segment,'West' region,'2024-09-12' join_date,24500 lifetime_value,'Active' status
       UNION ALL SELECT 'CUST002','Global Retail Ltd','Enterprise','North','2024-10-05',18750,'Active'
@@ -146,12 +146,12 @@ view: sql_runner_query {
   set: detail {
     fields: [
         customer_id,
-	customer_name,
-	segment,
-	region,
-	join_date,
-	lifetime_value,
-	status
+  customer_name,
+  segment,
+  region,
+  join_date,
+  lifetime_value,
+  status
     ]
   }
 }
