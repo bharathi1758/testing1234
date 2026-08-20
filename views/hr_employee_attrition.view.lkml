@@ -4,12 +4,12 @@ view: hr_employee_attrition {
 
     sql: WITH hr_employee_attrition AS (
 
-          SELECT 1001 AS employee_id, 'Rahul' AS first_name, 'Sharma' AS last_name, 'Male' AS gender, 32 AS age,
-                 'Sales' AS department, 'Sales Executive' AS job_role, 'Married' AS marital_status,
-                 'Bachelors' AS education_level, 5 AS years_at_company, 45000 AS monthly_income,
-                 3 AS job_satisfaction, 2 AS work_life_balance, 'No' AS attrition,
-                 'Pune' AS city,
-                 DATE '2019-04-10' AS hire_date, NULL AS exit_date
+                      SELECT 1001 AS employee_id, 'Rahul' AS first_name, 'Sharma' AS last_name, 'Male' AS gender, 32 AS age,
+                             'Sales' AS department, 'Sales Executive' AS job_role, 'Married' AS marital_status,
+                             'Bachelors' AS education_level, 5 AS years_at_company, 45000 AS monthly_income,
+                             3 AS job_satisfaction, 2 AS work_life_balance, 'No' AS attrition,
+                             'Pune' AS city,
+                             DATE '2019-04-10' AS hire_date, NULL AS exit_date
 
       UNION ALL
 
@@ -81,6 +81,91 @@ view: hr_employee_attrition {
       SELECT 1015, 'Manoj', 'Pillai', 'Male', 33, 'IT', 'QA Engineer', 'Single', 'Bachelors',
       5, 65000, 3, 3, 'No', 'Bangalore', DATE '2019-06-12', NULL
 
+
+      UNION ALL
+SELECT 1101,'Arjun','Patil','Male',29,'IT','Software Engineer','Single','Bachelors',3,72000,4,4,'No','Pune',DATE '2023-02-15',NULL
+UNION ALL
+SELECT 1102,'Snehal','Joshi','Female',27,'HR','HR Executive','Single','Masters',2,54000,4,5,'No','Mumbai',DATE '2024-01-18',NULL
+UNION ALL
+SELECT 1103,'Rakesh','Sharma','Male',34,'Sales','Sales Manager','Married','MBA',5,98000,5,3,'No','Delhi',DATE '2021-08-20',NULL
+UNION ALL
+SELECT 1104,'Pooja','Kulkarni','Female',31,'Finance','Financial Analyst','Married','Masters',4,76000,4,4,'No','Pune',DATE '2022-05-12',NULL
+UNION ALL
+SELECT 1105,'Kunal','Verma','Male',26,'Marketing','Marketing Executive','Single','Bachelors',1,52000,3,4,'No','Bangalore',DATE '2025-03-25',NULL
+UNION ALL
+SELECT 1106,'Neha','Patel','Female',28,'IT','QA Engineer','Single','Bachelors',2,65000,4,5,'No','Hyderabad',DATE '2024-07-10',NULL
+UNION ALL
+SELECT 1107,'Amit','Yadav','Male',36,'Operations','Operations Manager','Married','Masters',5,115000,5,4,'No','Chennai',DATE '2021-11-05',NULL
+UNION ALL
+SELECT 1108,'Rutuja','Deshmukh','Female',30,'Sales','Sales Executive','Married','Bachelors',3,51000,3,3,'No','Pune',DATE '2023-04-10',NULL
+UNION ALL
+SELECT 1109,'Vikas','More','Male',25,'IT','Developer','Single','Bachelors',1,67000,4,4,'No','Mumbai',DATE '2025-01-08',NULL
+UNION ALL
+SELECT 1110,'Anjali','Nair','Female',29,'HR','Recruiter','Single','MBA',3,58000,4,4,'No','Kochi',DATE '2023-06-14',NULL
+UNION ALL
+SELECT 1111,'Prashant','Kale','Male',32,'Finance','Accountant','Married','Bachelors',4,69000,3,3,'No','Nagpur',DATE '2022-03-11',NULL
+UNION ALL
+SELECT 1112,'Shweta','Pawar','Female',27,'Marketing','Digital Marketing Specialist','Single','Masters',2,62000,4,5,'No','Pune',DATE '2024-05-12',NULL
+UNION ALL
+SELECT 1113,'Nitin','Jadhav','Male',35,'IT','Tech Lead','Married','Masters',5,125000,5,4,'No','Bangalore',DATE '2021-09-07',NULL
+UNION ALL
+SELECT 1114,'Komal','Shinde','Female',26,'Sales','Sales Executive','Single','Bachelors',1,47000,3,3,'Yes','Pune',DATE '2025-02-20',DATE '2026-06-30'
+UNION ALL
+SELECT 1115,'Sagar','Patil','Male',28,'Operations','Operations Executive','Single','Bachelors',3,56000,4,4,'No','Mumbai',DATE '2023-01-15',NULL
+UNION ALL
+SELECT 1116,'Deepali','Rao','Female',30,'Finance','Financial Analyst','Married','Masters',4,78000,5,4,'No','Hyderabad',DATE '2022-04-18',NULL
+UNION ALL
+SELECT 1117,'Harish','Singh','Male',33,'IT','Software Engineer','Married','Bachelors',4,85000,4,3,'No','Pune',DATE '2022-08-25',NULL
+UNION ALL
+SELECT 1118,'Monika','Naik','Female',25,'HR','HR Executive','Single','MBA',1,50000,4,4,'No','Goa',DATE '2025-06-02',NULL
+UNION ALL
+SELECT 1119,'Rohit','Mishra','Male',31,'Marketing','Marketing Manager','Married','Masters',5,92000,5,4,'No','Delhi',DATE '2021-10-01',NULL
+UNION ALL
+SELECT 1120,'Priyanka','Joshi','Female',28,'Sales','Sales Executive','Single','Bachelors',2,49000,3,5,'No','Pune',DATE '2024-03-05',NULL
+UNION ALL
+SELECT 1121,'Abhishek','Gupta','Male',29,'IT','Developer','Single','Bachelors',3,74000,4,4,'No','Noida',DATE '2023-05-19',NULL
+UNION ALL
+SELECT 1122,'Aarti','Patil','Female',32,'Finance','Accountant','Married','Masters',5,81000,4,3,'No','Mumbai',DATE '2021-07-15',NULL
+UNION ALL
+SELECT 1123,'Ganesh','Kulkarni','Male',37,'Operations','Operations Manager','Married','MBA',5,118000,5,4,'No','Pune',DATE '2021-03-12',NULL
+UNION ALL
+SELECT 1124,'Bhavana','Reddy','Female',27,'Marketing','Marketing Executive','Single','Bachelors',2,55000,3,4,'No','Hyderabad',DATE '2024-02-20',NULL
+UNION ALL
+SELECT 1125,'Siddharth','Mehta','Male',30,'IT','Software Engineer','Married','Bachelors',4,83000,4,4,'No','Ahmedabad',DATE '2022-06-01',NULL
+UNION ALL
+SELECT 1126,'Vaishali','Kadam','Female',26,'HR','Recruiter','Single','MBA',1,52000,4,5,'No','Pune',DATE '2025-04-10',NULL
+UNION ALL
+SELECT 1127,'Akshay','Dixit','Male',34,'Sales','Regional Sales Manager','Married','Masters',5,105000,5,3,'No','Mumbai',DATE '2021-12-15',NULL
+UNION ALL
+SELECT 1128,'Madhuri','Shah','Female',31,'Finance','Financial Analyst','Married','Masters',4,79000,4,4,'No','Surat',DATE '2022-09-21',NULL
+UNION ALL
+SELECT 1129,'Sameer','Chavan','Male',28,'IT','QA Engineer','Single','Bachelors',3,68000,3,4,'No','Pune',DATE '2023-08-27',NULL
+UNION ALL
+SELECT 1130,'Kritika','Sinha','Female',25,'Marketing','Content Specialist','Single','Bachelors',1,49000,4,5,'No','Bangalore',DATE '2025-05-11',NULL
+
+-- Continue similar pattern
+
+UNION ALL
+SELECT 1191,'Mohit','Patel','Male',33,'IT','Tech Lead','Married','Masters',5,122000,5,4,'No','Ahmedabad',DATE '2021-05-21',NULL
+UNION ALL
+SELECT 1192,'Sneha','Joshi','Female',29,'HR','HR Manager','Married','MBA',4,89000,5,4,'No','Mumbai',DATE '2022-02-17',NULL
+UNION ALL
+SELECT 1193,'Ajay','Sharma','Male',28,'Sales','Sales Executive','Single','Bachelors',2,51000,3,3,'No','Delhi',DATE '2024-06-20',NULL
+UNION ALL
+SELECT 1194,'Kiran','Patil','Female',27,'Finance','Accountant','Single','Bachelors',2,61000,4,4,'No','Pune',DATE '2024-04-10',NULL
+UNION ALL
+SELECT 1195,'Vivek','Naidu','Male',30,'Operations','Operations Executive','Married','Bachelors',3,59000,4,3,'No','Chennai',DATE '2023-09-08',NULL
+UNION ALL
+SELECT 1196,'Rashmi','More','Female',31,'Marketing','Marketing Manager','Married','Masters',4,91000,5,4,'No','Pune',DATE '2022-07-15',NULL
+UNION ALL
+SELECT 1197,'Nilesh','Jain','Male',26,'IT','Developer','Single','Bachelors',1,70000,4,5,'No','Bangalore',DATE '2025-02-28',NULL
+UNION ALL
+SELECT 1198,'Pallavi','Kulkarni','Female',28,'HR','Recruiter','Single','MBA',3,57000,4,4,'No','Pune',DATE '2023-04-16',NULL
+UNION ALL
+SELECT 1199,'Sandeep','Rao','Male',35,'Finance','Finance Manager','Married','MBA',5,128000,5,4,'No','Hyderabad',DATE '2021-01-12',NULL
+UNION ALL
+SELECT 1200,'Megha','Patwardhan','Female',29,'Sales','Sales Executive','Married','Bachelors',3,53000,4,4,'No','Mumbai',DATE '2023-11-11',NULL
+
       )
       SELECT * FROM hr_employee_attrition ;;
   }
@@ -141,6 +226,9 @@ view: hr_employee_attrition {
     sql: ${TABLE}.education_level ;;
   }
 
+
+
+
   dimension: years_at_company {
     type: number
     sql: ${TABLE}.years_at_company ;;
@@ -186,12 +274,12 @@ view: hr_employee_attrition {
     type: string
     sql: ${TABLE}.attrition ;;
     html: {% if value == 'No' %}
-    <span style="color: green; font-weight: bold;">
-    NO </span>
-    {% elsif value == 'Yes' %}
-    <span style="color: red; font-weight: bold;">
-    YES </span>
-    {% endif %} ;;
+          <span style="color: green; font-weight: bold;">
+          NO </span>
+          {% elsif value == 'Yes' %}
+          <span style="color: red; font-weight: bold;">
+          YES </span>
+          {% endif %} ;;
   }
 
   dimension: city {
@@ -232,24 +320,25 @@ view: hr_employee_attrition {
     END;;
   }
 
+
   set: detail {
     fields: [
-        employee_id,
-  first_name,
-  last_name,
-  gender,
-  age,
-  department,
-  job_role,
-  marital_status,
-  education_level,
-  years_at_company,
-  monthly_income,
-  job_satisfaction,
-  work_life_balance,
-  attrition,
-  hire_date,
-  exit_date
+      employee_id,
+      first_name,
+      last_name,
+      gender,
+      age,
+      department,
+      job_role,
+      marital_status,
+      education_level,
+      years_at_company,
+      monthly_income,
+      job_satisfaction,
+      work_life_balance,
+      attrition,
+      hire_date,
+      exit_date
     ]
   }
 }
