@@ -486,7 +486,7 @@ view: demo_sales_100 {
     sql: 'Mcdonalds' ;;
 
     html:
-    <img src="https://static.vecteezy.com/system/resources/previews/019/909/624/large_2x/mcdonald-s-transparent-mcdonald-s-free-free-png.png" height="80" width = "500">
+    <img src="https://static.vecteezy.com/system/resources/previews/019/909/624/large_2x/mcdonald-s-transparent-mcdonald-s-free-free-png.png" height="400" width = "400">
       ;;
   }
 
