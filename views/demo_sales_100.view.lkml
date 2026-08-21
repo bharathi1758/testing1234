@@ -475,7 +475,14 @@ view: demo_sales_100 {
     type: number
     sql: ${TABLE}.quantity ;;
   }
+  dimension: capgemini_logo {
+    type: string
+    sql: 'Capgemini' ;;
 
+    html:
+    <img src="https://1000logos.net/wp-content/uploads/2021/08/Capgemini-Logo.png" height="80" width = "500">
+      ;;
+  }
   dimension: status {
     type: string
     sql: ${TABLE}.status ;;
