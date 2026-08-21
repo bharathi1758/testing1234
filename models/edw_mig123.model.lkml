@@ -45,7 +45,6 @@ explore: test_error_records {
     }
 }
 explore: demo_sales_100 {
-
   join: customer_table {
 
     type: left_outer
