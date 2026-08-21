@@ -13,8 +13,33 @@ persist_with: edw_mig123_default_datagroup
 explore: orders {}
 
 explore: test {}
+explore: demo_billing {
+
+  join: demo_customer_100 {
+    type: left_outer
+    relationship: many_to_one
+    sql_on: ${demo_billing.customer_id} = ${demo_customer_100.customer_id} ;;
+  }
+
+  join: demo_sales_100 {
+    type: left_outer
+    relationship: one_to_many
+    sql_on: ${demo_billing.customer_id} = ${demo_sales_100.customer_id} ;;
+  }
+
+}
 
 explore: hr_employee_attrition {}
+
+explore: demo_sales_100 {
+  join: demo_customer_100 {
+    type: left_outer
+    sql_on: ${demo_customer_100.customer_id} = ${demo_sales_100.customer_id} ;;
+    relationship: many_to_one
+  }
+
+}
+explore: demo_customer_100 {}
 
 explore: sales {
   join: orders {

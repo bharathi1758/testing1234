@@ -59,7 +59,7 @@ view: hr_employee_attrition {
       UNION ALL
 
       SELECT 1011, 'Vikram', 'Desai', 'Male', 34, 'Finance', 'Financial Analyst', 'Married', 'Masters',
-      6, 72000, 3, 3, 'No', 'Bangalore', DATE '2018-10-08', NULL
+      6, 72000, 3, 3, 'Yes', 'Bangalore', DATE '2018-10-08', NULL
 
       UNION ALL
 
@@ -85,7 +85,7 @@ view: hr_employee_attrition {
       UNION ALL
 SELECT 1101,'Arjun','Patil','Male',29,'IT','Software Engineer','Single','Bachelors',3,72000,4,4,'No','Pune',DATE '2023-02-15',NULL
 UNION ALL
-SELECT 1102,'Snehal','Joshi','Female',27,'HR','HR Executive','Single','Masters',2,54000,4,5,'No','Mumbai',DATE '2024-01-18',NULL
+SELECT 1102,'Snehal','Joshi','Female',27,'HR','HR Executive','Single','Masters',2,54000,4,5,'Yes','Mumbai',DATE '2024-01-18',NULL
 UNION ALL
 SELECT 1103,'Rakesh','Sharma','Male',34,'Sales','Sales Manager','Married','MBA',5,98000,5,3,'No','Delhi',DATE '2021-08-20',NULL
 UNION ALL
@@ -101,7 +101,7 @@ SELECT 1108,'Rutuja','Deshmukh','Female',30,'Sales','Sales Executive','Married',
 UNION ALL
 SELECT 1109,'Vikas','More','Male',25,'IT','Developer','Single','Bachelors',1,67000,4,4,'No','Mumbai',DATE '2025-01-08',NULL
 UNION ALL
-SELECT 1110,'Anjali','Nair','Female',29,'HR','Recruiter','Single','MBA',3,58000,4,4,'No','Kochi',DATE '2023-06-14',NULL
+SELECT 1110,'Anjali','Nair','Female',29,'HR','Recruiter','Single','MBA',3,58000,4,4,'Yes','Kochi',DATE '2023-06-14',NULL
 UNION ALL
 SELECT 1111,'Prashant','Kale','Male',32,'Finance','Accountant','Married','Bachelors',4,69000,3,3,'No','Nagpur',DATE '2022-03-11',NULL
 UNION ALL
@@ -117,7 +117,7 @@ SELECT 1116,'Deepali','Rao','Female',30,'Finance','Financial Analyst','Married',
 UNION ALL
 SELECT 1117,'Harish','Singh','Male',33,'IT','Software Engineer','Married','Bachelors',4,85000,4,3,'No','Pune',DATE '2022-08-25',NULL
 UNION ALL
-SELECT 1118,'Monika','Naik','Female',25,'HR','HR Executive','Single','MBA',1,50000,4,4,'No','Goa',DATE '2025-06-02',NULL
+SELECT 1118,'Monika','Naik','Female',25,'HR','HR Executive','Single','MBA',1,50000,4,4,'Yes','Goa',DATE '2025-06-02',NULL
 UNION ALL
 SELECT 1119,'Rohit','Mishra','Male',31,'Marketing','Marketing Manager','Married','Masters',5,92000,5,4,'No','Delhi',DATE '2021-10-01',NULL
 UNION ALL
@@ -133,7 +133,7 @@ SELECT 1124,'Bhavana','Reddy','Female',27,'Marketing','Marketing Executive','Sin
 UNION ALL
 SELECT 1125,'Siddharth','Mehta','Male',30,'IT','Software Engineer','Married','Bachelors',4,83000,4,4,'No','Ahmedabad',DATE '2022-06-01',NULL
 UNION ALL
-SELECT 1126,'Vaishali','Kadam','Female',26,'HR','Recruiter','Single','MBA',1,52000,4,5,'No','Pune',DATE '2025-04-10',NULL
+SELECT 1126,'Vaishali','Kadam','Female',26,'HR','Recruiter','Single','MBA',1,52000,4,5,'Yes','Pune',DATE '2025-04-10',NULL
 UNION ALL
 SELECT 1127,'Akshay','Dixit','Male',34,'Sales','Regional Sales Manager','Married','Masters',5,105000,5,3,'No','Mumbai',DATE '2021-12-15',NULL
 UNION ALL
@@ -150,7 +150,7 @@ SELECT 1191,'Mohit','Patel','Male',33,'IT','Tech Lead','Married','Masters',5,122
 UNION ALL
 SELECT 1192,'Sneha','Joshi','Female',29,'HR','HR Manager','Married','MBA',4,89000,5,4,'No','Mumbai',DATE '2022-02-17',NULL
 UNION ALL
-SELECT 1193,'Ajay','Sharma','Male',28,'Sales','Sales Executive','Single','Bachelors',2,51000,3,3,'No','Delhi',DATE '2024-06-20',NULL
+SELECT 1193,'Ajay','Sharma','Male',28,'Sales','Sales Executive','Single','Bachelors',2,51000,3,3,'Yes','Delhi',DATE '2024-06-20',NULL
 UNION ALL
 SELECT 1194,'Kiran','Patil','Female',27,'Finance','Accountant','Single','Bachelors',2,61000,4,4,'No','Pune',DATE '2024-04-10',NULL
 UNION ALL
@@ -162,7 +162,7 @@ SELECT 1197,'Nilesh','Jain','Male',26,'IT','Developer','Single','Bachelors',1,70
 UNION ALL
 SELECT 1198,'Pallavi','Kulkarni','Female',28,'HR','Recruiter','Single','MBA',3,57000,4,4,'No','Pune',DATE '2023-04-16',NULL
 UNION ALL
-SELECT 1199,'Sandeep','Rao','Male',35,'Finance','Finance Manager','Married','MBA',5,128000,5,4,'No','Hyderabad',DATE '2021-01-12',NULL
+SELECT 1199,'Sandeep','Rao','Male',35,'Finance','Finance Manager','Married','MBA',5,128000,5,4,'Yes','Hyderabad',DATE '2021-01-12',NULL
 UNION ALL
 SELECT 1200,'Megha','Patwardhan','Female',29,'Sales','Sales Executive','Married','Bachelors',3,53000,4,4,'No','Mumbai',DATE '2023-11-11',NULL
 
