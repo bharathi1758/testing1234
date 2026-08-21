@@ -44,3 +44,22 @@ explore: test_error_records {
       relationship: one_to_many
     }
 }
+explore: demo_sales_100 {
+
+  join: customer_table {
+
+    type: left_outer
+
+    sql_on: ${customer_table.customer_id} = ${demo_sales_100.customer_id} ;;
+
+    relationship: many_to_one
+
+  }
+}
+explore: demo_bill_table {
+  label: "Billing Table"
+}
+
+explore: customer_table {
+  label: "Customer Table"
+}
