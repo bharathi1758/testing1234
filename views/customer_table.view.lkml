@@ -148,7 +148,7 @@ view: customer_table {
     sql: 'Mcdonalds' ;;
 
     html:
-    <img src="https://static.vecteezy.com/system/resources/previews/019/909/624/large_2x/mcdonald-s-transparent-mcdonald-s-free-free-png.png" height="350" width = "400">
+    <img src="https://static.vecteezy.com/system/resources/previews/019/909/624/large_2x/mcdonald-s-transparent-mcdonald-s-free-free-png.png" height="250" width = "400">
       ;;
   }
 
