@@ -18,6 +18,7 @@ view: student {
     type: string
     sql: ${TABLE}.Subject ;;
   }
+
   measure: count {
     type: count
   }

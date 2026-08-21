@@ -3,11 +3,12 @@ connection: "bigquery"
 # include all the views
 include: "/views/**/*.view.lkml"
 
+
 datagroup: edw_mig123_default_datagroup {
   # sql_trigger: SELECT MAX(id) FROM etl_log;;
   max_cache_age: "1 hour"
 }
-
+include: "/dashboards/test_demo1.dashboard.lookml"
 persist_with: edw_mig123_default_datagroup
 
 explore: orders {}
@@ -25,10 +26,10 @@ explore: sales {
 }
 explore: dummy_sales_data {
 
-  access_filter: {
-    field: dummy_sales_data.region
-    user_attribute: test_region
-  }
+  # access_filter: {
+  #   field: dummy_sales_data.region
+  #   user_attribute: test_region
+  # }
 
 }
 explore: student {}
