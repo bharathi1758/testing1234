@@ -59,3 +59,7 @@ explore: demo_bill_table {
 explore: customer_table {
   label: "Customer Table"
 }
+
+explore: orders_super {
+  label: "Orders from super"
+}
