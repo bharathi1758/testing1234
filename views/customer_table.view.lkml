@@ -148,7 +148,7 @@ view: customer_table {
     sql: 'Capgemini' ;;
 
     html:
-    <img src="https://1000logos.net/wp-content/uploads/2021/08/Capgemini-Logo.png" height="80" width = "500">
+    <img src="https://1000logos.net/wp-content/uploads/2021/08/Capgemini-Logo.png" height="80" width = "400">
       ;;
   }
 
