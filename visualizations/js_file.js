@@ -37,8 +37,16 @@
   };
 
   function esc(value) {
-    return String(value == null ? "" : value).replace(/[&<>'"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;","'":"&#39;",'"':"&quot;"}[c]));
-  }
+  #   return String(value == null ? "" : value).replace(/[&<>'"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;","'":"&#39;",'"':"&quot;"}[c]));
+  # }
+  return String(value == null ? "" : value).replace(/[&<>'"]/g, c => ({
+  "&": "&amp;",
+  "<": "&lt;",
+  ">": "&gt;",
+  "'": "&#39;",
+  '"': "&quot;"
+}[c]));
+}
   function raw(cell) {
     if (cell == null) return null;
     return typeof cell === "object" && "value" in cell ? cell.value : cell;
