@@ -17,7 +17,7 @@ view: dummy_sales_data {
         UNION ALL
         SELECT 107, 'Akhil', 'akhil@demo.com', 'Marketing', 'India', 'India', 9000
         UNION ALL
-        SELECT 108, 'Emma', 'emma@demo.com', 'Marketing', 'North', 'UK', 8000
+        SELECT 108, 'Emma', 'emma@demo.com', 'Marketing', 'North', 'USA', 8000
         UNION ALL
         SELECT 109, 'Lucas', 'lucas@demo.com', 'Finance', 'South', 'USA', 7000
         UNION ALL
@@ -108,8 +108,6 @@ view: dummy_sales_data {
       <img src="https://flagcdn.com/w80/us.png" height="60" width="100">
     {% elsif value == "India" %}
       <img src="https://flagcdn.com/w80/in.png" height="60" width="100">
-    {% elsif value == "UK" %}
-  <img src="https://upload.wikimedia.org/wikipedia/commons/9/9d/Capgemini_201x_logo.svg" height="60" width = "500">
   {% endif %}
   ;;
   }
