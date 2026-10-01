@@ -29,7 +29,12 @@ explore: demo_billing {
 
 }
 
-explore: hr_employee_attrition {}
+explore: hr_employee_attrition {
+  access_filter: {
+    field: hr_employee_attrition.region
+    user_attribute: test_region
+  }
+}
 
 explore: demo_sales_100 {
   join: demo_customer_100 {

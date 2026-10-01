@@ -143,28 +143,26 @@ SELECT 1129,'Sameer','Chavan','Male',28,'IT','QA Engineer','Single','Bachelors',
 UNION ALL
 SELECT 1130,'Kritika','Sinha','Female',25,'Marketing','Content Specialist','Single','Bachelors',1,49000,4,5,'No','Bangalore',DATE '2025-05-11',NULL
 
--- Continue similar pattern
-
 UNION ALL
-SELECT 1191,'Mohit','Patel','Male',33,'IT','Tech Lead','Married','Masters',5,122000,5,4,'No','Ahmedabad',DATE '2021-05-21',NULL
+SELECT 1131,'Mohit','Patel','Male',33,'IT','Tech Lead','Married','Masters',5,122000,5,4,'No','Ahmedabad',DATE '2021-05-21',NULL
 UNION ALL
-SELECT 1192,'Sneha','Joshi','Female',29,'HR','HR Manager','Married','MBA',4,89000,5,4,'No','Mumbai',DATE '2022-02-17',NULL
+SELECT 1132,'Sneha','Joshi','Female',29,'HR','HR Manager','Married','MBA',4,89000,5,4,'No','Mumbai',DATE '2022-02-17',NULL
 UNION ALL
-SELECT 1193,'Ajay','Sharma','Male',28,'Sales','Sales Executive','Single','Bachelors',2,51000,3,3,'Yes','Delhi',DATE '2024-06-20',NULL
+SELECT 1133,'Ajay','Sharma','Male',28,'Sales','Sales Executive','Single','Bachelors',2,51000,3,3,'Yes','Delhi',DATE '2024-06-20',NULL
 UNION ALL
-SELECT 1194,'Kiran','Patil','Female',27,'Finance','Accountant','Single','Bachelors',2,61000,4,4,'No','Pune',DATE '2024-04-10',NULL
+SELECT 1134,'Kiran','Patil','Female',27,'Finance','Accountant','Single','Bachelors',2,61000,4,4,'No','Pune',DATE '2024-04-10',NULL
 UNION ALL
-SELECT 1195,'Vivek','Naidu','Male',30,'Operations','Operations Executive','Married','Bachelors',3,59000,4,3,'No','Chennai',DATE '2023-09-08',NULL
+SELECT 1135,'Vivek','Naidu','Male',30,'Operations','Operations Executive','Married','Bachelors',3,59000,4,3,'No','Chennai',DATE '2023-09-08',NULL
 UNION ALL
-SELECT 1196,'Rashmi','More','Female',31,'Marketing','Marketing Manager','Married','Masters',4,91000,5,4,'No','Pune',DATE '2022-07-15',NULL
+SELECT 1136,'Rashmi','More','Female',31,'Marketing','Marketing Manager','Married','Masters',4,91000,5,4,'No','Pune',DATE '2022-07-15',NULL
 UNION ALL
-SELECT 1197,'Nilesh','Jain','Male',26,'IT','Developer','Single','Bachelors',1,70000,4,5,'No','Bangalore',DATE '2025-02-28',NULL
+SELECT 1137,'Nilesh','Jain','Male',26,'IT','Developer','Single','Bachelors',1,70000,4,5,'No','Bangalore',DATE '2025-02-28',NULL
 UNION ALL
-SELECT 1198,'Pallavi','Kulkarni','Female',28,'HR','Recruiter','Single','MBA',3,57000,4,4,'No','Pune',DATE '2023-04-16',NULL
+SELECT 1138,'Pallavi','Kulkarni','Female',28,'HR','Recruiter','Single','MBA',3,57000,4,4,'No','Pune',DATE '2023-04-16',NULL
 UNION ALL
-SELECT 1199,'Sandeep','Rao','Male',35,'Finance','Finance Manager','Married','MBA',5,128000,5,4,'Yes','Hyderabad',DATE '2021-01-12',NULL
+SELECT 1139,'Sandeep','Rao','Male',35,'Finance','Finance Manager','Married','MBA',5,128000,5,4,'Yes','Hyderabad',DATE '2021-01-12',NULL
 UNION ALL
-SELECT 1200,'Megha','Patwardhan','Female',29,'Sales','Sales Executive','Married','Bachelors',3,53000,4,4,'No','Mumbai',DATE '2023-11-11',NULL
+SELECT 1140,'Megha','Patwardhan','Female',29,'Sales','Sales Executive','Married','Bachelors',3,53000,4,4,'No','Mumbai',DATE '2023-11-11',NULL
 
       )
       SELECT * FROM hr_employee_attrition ;;
@@ -285,6 +283,17 @@ SELECT 1200,'Megha','Patwardhan','Female',29,'Sales','Sales Executive','Married'
   dimension: city {
     type: string
     sql: ${TABLE}.city ;;
+  }
+
+  dimension: region {
+    type: string
+    sql:
+    CASE
+    WHEN ${city} IN ('Pune','Goa','Mumbai','Nagpur','Surat','Ahmedabad') THEN 'WEST'
+    WHEN ${city} IN ('Delhi','Noida') THEN 'NORTH'
+    WHEN ${city} IN ('Banglore','Kochi','Hyderabad','Chennai') THEN 'SOUTH'
+    ELSE 'Other'
+    END;;
   }
 
   dimension: hire_date {
