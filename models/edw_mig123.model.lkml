@@ -18,8 +18,8 @@ explore: test {}
 
 explore: hr_employee_attrition {
   access_filter: {
-    field: hr_employee_attrition.region
-    user_attribute: test_region
+    field: hr_employee_attrition.department
+    user_attribute: test_dept
   }
 }
 
