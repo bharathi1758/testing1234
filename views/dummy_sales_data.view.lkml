@@ -67,6 +67,59 @@ view: dummy_sales_data {
     type: number
     sql: ${TABLE}.sales_amount ;;
   }
+  # dimension: country_flag {
+  #   label: "Country Flag"
+  #   type: string
+  #   sql: ${country} ;;
+
+  #   html:
+  #     {% assign c = value | downcase %}
+  #     {% if c == "USA" %}
+  #       <ttps://flagcdn.com/w80/us.png
+  #     {% elsif c == "India" %}
+  #       <img srcflagcdn.com/w80/in.png
+  #     {% endif %}
+  #     ;;
+  # }
+  # dimension: country_flag {
+  #   label: "Country Flag"
+  #   type: string
+  #   sql: ${country} ;;
+
+  #   html:
+  #   {% assign c = value | downcase %}
+
+  #         {% if c == "usa" %}
+  #           <img src="https://flagcdn.com/w80/us.png" height="60" width = "500">
+  #         {% elsif c == "india" %}
+  #           <img src="https://flagcdn.com/w80/in.png" height="60" width = "500">
+  #           {% elsif c == "uk" %}
+  #           # <img src="https://upload.wikimedia.org/wikipedia/commons/9/9d/Capgemini_201x_logo.svg" height="60" width = "500">
+  #         {% endif %}
+  #       ;;
+  # }
+  dimension: country_flag {
+    label: "Country Flag"
+    type: string
+    sql: ${country} ;;
+
+    html:
+    {% if value == "USA" %}
+      <img src="https://flagcdn.com/w80/us.png" height="60" width="100">
+    {% elsif value == "India" %}
+      <img src="https://flagcdn.com/w80/in.png" height="60" width="100">
+  {% endif %}
+  ;;
+  }
+
+  dimension: capgemini_logo {
+    type: string
+    sql: 'Capgemini' ;;
+
+    html:
+    <img src="https://1000logos.net/wp-content/uploads/2021/08/Capgemini-Logo.png" height="80" width = "500">
+  ;;
+  }
 
   set: detail {
     fields: [
