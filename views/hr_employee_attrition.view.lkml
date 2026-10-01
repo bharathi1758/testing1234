@@ -289,9 +289,9 @@ SELECT 1140,'Megha','Patwardhan','Female',29,'Sales','Sales Executive','Married'
     type: string
     sql:
     CASE
-    WHEN ${city} IN ('Pune','Goa','Mumbai','Nagpur','Surat','Ahmedabad') THEN 'WEST'
-    WHEN ${city} IN ('Delhi','Noida') THEN 'NORTH'
-    WHEN ${city} IN ('Banglore','Kochi','Hyderabad','Chennai') THEN 'SOUTH'
+    WHEN ${city} IN ('Pune','Goa','Mumbai','Nagpur','Surat','Ahmedabad') THEN 'West'
+    WHEN ${city} IN ('Delhi','Noida') THEN 'North'
+    WHEN ${city} IN ('Banglore','Kochi','Hyderabad','Chennai') THEN 'South'
     ELSE 'Other'
     END;;
 
