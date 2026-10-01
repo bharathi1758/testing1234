@@ -294,6 +294,7 @@ SELECT 1140,'Megha','Patwardhan','Female',29,'Sales','Sales Executive','Married'
     WHEN ${city} IN ('Banglore','Kochi','Hyderabad','Chennai') THEN 'SOUTH'
     ELSE 'Other'
     END;;
+
   }
 
   dimension: hire_date {
